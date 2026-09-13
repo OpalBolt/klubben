@@ -1,6 +1,6 @@
 # klubben — Hugo-siteconfig
-# EXAMPLE i baseURL: udskiftes med GitHub-brugernavnet, når repoet pushes
-baseURL = "https://EXAMPLE.github.io/klub/"
+# repos > github-pages: https://opalbolt.github.io/klubben/
+baseURL = "https://opalbolt.github.io/klubben/"
 title = "klubben"
 locale = "da-dk"
 defaultContentLanguage = "da"
