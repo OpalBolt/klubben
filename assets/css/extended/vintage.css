@@ -4,13 +4,13 @@
    Ingen webfonts, intet JS, ingen billeder. */
 
 :root {
-    --theme: #f7f0e0;      /* papiret */
+    --theme: #efe6cd;      /* papiret — den varme tone overalt */
     --entry: #fbf6ea;      /* kort/indholdsfelt */
     --primary: #2b2117;    /* varm nær-sort blæk — ca. 15:1 på papiret (AAA) */
     --secondary: #54432e;  /* falmet blæk til meta — ca. 7:1 (AAA) */
     --tertiary: #93815f;
     --content: #2b2117;
-    --code-bg: #efe6cd;
+    --code-bg: #e8dcc0;    /* mørkere end papiret, så kodeblokke står af */
     --border: #c3b391;
     --accent: #8a3d0f;     /* brændt sienna til links — ca. 8:1 (AAA) */
 }
@@ -52,6 +52,12 @@ h1, h2, h3, h4 {
     padding: 1rem 1.25rem;
     border: 1px solid var(--border);
     background: var(--entry);
+}
+
+/* PaperMod giver .list-sider (forside, sektioner) kodebloksfarven som
+   sidebaggrund — deraf to forskellige papirfarver på sitet. Ét papir: */
+.list {
+    background: var(--theme);
 }
 
 /* nav og sitenavn i blækfarver, tungt nok til at stå på papiret */

@@ -58,4 +58,4 @@ ShowBreadCrumbs = false
 
 [params.assets]
 # browserens fanefarve matcher papiret
-theme_color = "#f7f0e0"
+theme_color = "#efe6cd"
