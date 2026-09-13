@@ -7,6 +7,9 @@ defaultContentLanguage = "da"
 theme = "PaperMod"
 enableGitInfo = false
 
+# ingen kategorier/tags/rss — fire sider, intet mere
+disableKinds = ["taxonomy", "term", "rss"]
+
 [menu]
 [[menu.main]]
 name = "Forside"
@@ -26,9 +29,16 @@ pageRef = "/historie/"
 weight = 4
 
 [params]
+# lys papir altid — slår mørk tilstand og dens JS helt fra; med defaultTheme = "light" udsendes heller intet auto-theme-script
+defaultTheme = "light"
+disableThemeToggle = true
 ShowReadingTime = false
 ShowShareButtons = false
 ShowPostNavLinks = false
 ShowCodeCopyButtons = false
 ShowWordCount = false
 ShowBreadCrumbs = false
+
+[params.assets]
+# browserens fanefarve matcher papiret
+theme_color = "#f7f0e0"

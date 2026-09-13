@@ -1,0 +1,58 @@
+/* klubben vintage-lag — varmt creme-papir, tung antikva, høj kontrast
+   (samme valg gør sitet læsbart for 60+). Indlæses af PaperMods
+   css/extended-hook EFTER kernen, så almindelige regler vinder.
+   Ingen webfonts, intet JS, ingen billeder. */
+
+:root {
+    --theme: #f7f0e0;      /* papiret */
+    --entry: #fbf6ea;      /* kort/indholdsfelt */
+    --primary: #2b2117;    /* varm nær-sort blæk — ca. 15:1 på papiret (AAA) */
+    --secondary: #54432e;  /* falmet blæk til meta — ca. 7:1 (AAA) */
+    --tertiary: #93815f;
+    --content: #2b2117;
+    --code-bg: #efe6cd;
+    --border: #c3b391;
+    --accent: #8a3d0f;     /* brændt sienna til links — ca. 8:1 (AAA) */
+}
+
+/* tung antikva til overskrifter OG brødtekst */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;       /* stor, komfortabel brødtekst for 60+ */
+    line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+}
+
+/* papirfornemmelse: tynd dobbeltstreg under h2-sektioner */
+.post-content h2 {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.25rem;
+}
+
+/* links altid understreget, i papirpalettens accentfarve */
+.post-content a {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+    text-decoration-thickness: 3px;
+}
+
+/* nav og sitenavn i blækfarver, tungt nok til at stå på papiret */
+.header .menu a {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.logo a,
+.logo #logo {
+    font-weight: 700;
+}
