@@ -3,3 +3,12 @@
 hugo = "0.166.0"
 # kalender-hentningen i deploy-workflowet kører på samme pin
 python = "3.14"
+
+[tasks.serve]
+description = "Servér sitet på netværket (PORT overskriver 1313)"
+run = """
+IP=$(ip -4 route get 1.1.1.1 | awk '{for(i=1;i<=NF;i++) if($i=="src") {print $(i+1); exit}}')
+PORT=${PORT:-1313}
+echo "klubben kører på http://$IP:$PORT/"
+hugo server --bind 0.0.0.0 --port "$PORT" --baseURL "http://$IP:$PORT/"
+"""
