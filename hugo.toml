@@ -10,6 +10,11 @@ enableGitInfo = false
 # ingen kategorier/tags/rss — fire sider, intet mere
 disableKinds = ["taxonomy", "term", "rss"]
 
+# kodeblokke i papirfarve — ellers kommer chromas mørke standardblok oven i det lyse tema
+[markup]
+  [markup.highlight]
+    style = "solarized-light"
+
 [menu]
 [[menu.main]]
 name = "Forside"
