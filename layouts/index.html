@@ -22,11 +22,11 @@
       {{ if $weekEvents }}
       <ul>
         {{ range $weekEvents }}
-        <li><strong>{{ .title }}</strong> — {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+        <li><strong>{{ .title }}</strong>: {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
         {{ end }}
       </ul>
       {{ else }}
-      <p>Ingen begivenheder at vise lige nu — vi mødes som altid onsdag kl. 19.00.</p>
+      <p>Ingen begivenheder at vise lige nu. Vi mødes som altid onsdag kl. 19.00.</p>
       {{ end }}
       <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
     </section>

@@ -13,7 +13,7 @@
           {{ range $events }}
           <li>
             <strong>{{ .title }}</strong><br>
-            {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}{{ with .location }} — {{ . }}{{ end }}
+            {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}{{ with .location }}, {{ . }}{{ end }}
           </li>
           {{ end }}
         </ul>

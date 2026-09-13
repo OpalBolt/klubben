@@ -272,7 +272,7 @@ def render_events(raw, today=None, days=60, cap=25):
             elif isinstance(start, datetime):
                 time_dk = _dk_time(start)
                 if isinstance(end, datetime) and end.date() == start_date:
-                    time_dk += "–" + _dk_time(end).split("kl. ")[1]
+                    time_dk += "-" + _dk_time(end).split("kl. ")[1]
             else:
                 time_dk = ""
             out.append({
@@ -332,7 +332,7 @@ def self_test():
     evs = render_events(parse_ics(ics), today=date(2026, 9, 1))
     check("foldet+unescape titel", evs[0]["title"], "Lille poolturnering, kold; hygge")
     check("dato_dk onsdag", evs[0]["date_dk"], "onsdag d. 16. september")
-    check("tidsinterval", evs[0]["time_dk"], "kl. 19.00–22.00")
+    check("tidsinterval", evs[0]["time_dk"], "kl. 19.00-22.00")
     check("location", evs[0]["location"], "Kælderen")
     check("start_iso", evs[0]["start_iso"], "2026-09-16T19:00:00")
 
@@ -367,7 +367,7 @@ def self_test():
     evs = render_events(parse_ics(ics), today=date(2026, 9, 13), days=60)
     check("ugentlig antal", len(evs), 9)  # 16. sep .. 11. nov
     check("ugentlig første", evs[0]["date_dk"], "onsdag d. 16. september")
-    check("ugentlig interval", evs[0]["time_dk"], "kl. 19.00–23.00")
+    check("ugentlig interval", evs[0]["time_dk"], "kl. 19.00-23.00")
 
     # 6. COUNT begrænser antal forekomster
     ics = ("BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nSUMMARY:Kort serie\r\n"
