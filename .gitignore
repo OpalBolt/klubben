@@ -1,0 +1,10 @@
+# planning docs, not for the public repo
+.scratch/
+
+# hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# mise local overrides
+.mise.local.toml
