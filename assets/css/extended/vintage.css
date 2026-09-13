@@ -58,6 +58,20 @@ h1, h2, h3, h4 {
 .header .menu a {
     font-weight: 600;
     color: var(--primary);
+    font-size: 18px; /* samme læselige størrelse som resten af sitet (60+) */
+}
+
+/* PaperMods nav er en vandret rulleseddel (overflow-x: auto, nowrap) —
+   ulæselig på mobil med 7 punkter. Heri: fold ud i flere rækker i stedet.
+   header-nav arver 60px linjehøjde, for tæt til flere rækker, så vi
+   overskriver den lokalt. Intet JS, intet skjult. */
+.header .menu {
+    flex-wrap: wrap;
+    white-space: normal;
+    overflow: visible;
+    row-gap: 0.35rem;
+    line-height: 1.6;
+    padding: 0.25rem 0 0.5rem;
 }
 
 .logo a,
