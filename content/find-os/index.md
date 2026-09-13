@@ -4,22 +4,17 @@ title: "Find os"
 klubben ligger i en kælder, og indgangen er let at gå forbi. Her er, hvordan
 du finder frem:
 
-## Adressen
-
-**[Adresse: udfyldes af vedligeholderen]**
+![indgangen](indgang-med-pil.jpg)
 
 ## Sådan finder du frem
 
-klubben ligger i kælderen under [boligkompleksets navn] i [kvarterets navn].
-Find hovedopgangen til komplekset. Trappen ned til klubben sidder i nærheden
-af opgangen, [nøjagtig placering: udfyldes af vedligeholderen].
+klubben ligger i kælderenedgangen ved Sabrosvej 5B.
 
 ## Trappen ned
 
 Kig efter en trappe, der går ned i kælderen. Der er intet skilt, og trappen
 gemmer sig godt i facaden. Mange går forbi, uden at opdage den. Nederst
-er der en dør, og bag den ligger klubben. [Her kan vedligeholderen skrive,
-hvad man bedst kan kigge efter: udfyldes.]
+er der en dør, og bag den ligger klubben.
 
 ## Er du i tvivl?
 
