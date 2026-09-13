@@ -1,7 +1,17 @@
 {{ define "main" }}
-<!-- spill: custom home template so Forside renders content/_index.md as a
-     plain page instead of PaperMod's empty post list -->
-<article>
-  <div class="post-content">{{ .Content }}</div>
+<!-- spill: custom home template (slice 01) so Forside renders as a plain
+     front door instead of PaperMod's empty post list; slice 03 added the
+     prices block and the "Denne uge" section -->
+<article class="forside">
+  <div class="post-content">
+    {{ .Content }}
+
+    <section class="denne-uge" aria-label="Denne uge">
+      <h2>Denne uge</h2>
+      <!-- slice 06: ugens begivenheder fra kalenderen indsættes her -->
+      <p>Ingen begivenheder at vise lige nu — vi mødes som altid onsdag kl. 19.00.</p>
+      <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
+    </section>
+  </div>
 </article>
 {{ end }}

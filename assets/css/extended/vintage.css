@@ -46,6 +46,19 @@ h1, h2, h3, h4 {
     text-decoration-thickness: 3px;
 }
 
+/* forsidens felter: "denne uge" står som et lille kort på papiret */
+.forside .denne-uge {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--entry);
+}
+
+/* priserne skal ses med det samme — de står som tekst på forsiden */
+.forside .post-content ul {
+    font-size: 1.15em;
+}
+
 /* nav og sitenavn i blækfarver, tungt nok til at stå på papiret */
 .header .menu a {
     font-weight: 600;
