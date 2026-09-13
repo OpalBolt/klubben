@@ -23,5 +23,6 @@ hvad man bedst kan kigge efter: udfyldes.]
 
 ## Er du i tvivl?
 
-Onsdag kl. 19.00 er der liv i lokalet. Kom ned og bank på — alle er
-velkomne, og der er ingen tilmelding.
+Onsdag kl. 19.00 er der liv i lokalet. Kom ned og bank på — alle er velkomne
+som gæster. Vil du være med i klubben, tegner du medlemskab i lokalet;
+priserne står under [Det koster]({{< relref "det-koster.md" >}}).

@@ -10,8 +10,9 @@ The club's name. Always lowercase, no logo, no tagline.
 _Avoid_: Klubben, the Club
 
 **Newcomer (ny/gæst)**:
-A person who has not joined. Needs no signup and no contact info — the
-website's whole answer to them is "come by any Wednesday at 19:00".
+A person who has not joined. The website's whole answer to them is "come by
+any Wednesday at 19:00" — welcome as a guest. Becoming part of the club
+requires a membership, paid in the room; there is no digital signup path.
 _Avoid_: guest user, visitor, prospective member
 
 **Member (medlem)**:
