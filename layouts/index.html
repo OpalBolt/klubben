@@ -1,0 +1,7 @@
+{{ define "main" }}
+<!-- spill: custom home template so Forside renders content/_index.md as a
+     plain page instead of PaperMod's empty post list -->
+<article>
+  <div class="post-content">{{ .Content }}</div>
+</article>
+{{ end }}

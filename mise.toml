@@ -1,0 +1,3 @@
+[tools]
+# pinned so local dev and the Pages CI build use the same Hugo
+hugo = "0.166.0"

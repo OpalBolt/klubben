@@ -1,0 +1,34 @@
+# klubben — Hugo-siteconfig
+# EXAMPLE i baseURL: udskiftes med GitHub-brugernavnet, når repoet pushes
+baseURL = "https://EXAMPLE.github.io/klub/"
+title = "klubben"
+locale = "da-dk"
+defaultContentLanguage = "da"
+theme = "PaperMod"
+enableGitInfo = false
+
+[menu]
+[[menu.main]]
+name = "Forside"
+pageRef = "/"
+weight = 1
+[[menu.main]]
+name = "Events"
+pageRef = "/events/"
+weight = 2
+[[menu.main]]
+name = "Find os"
+pageRef = "/find-os/"
+weight = 3
+[[menu.main]]
+name = "Historie"
+pageRef = "/historie/"
+weight = 4
+
+[params]
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = false
+ShowCodeCopyButtons = false
+ShowWordCount = false
+ShowBreadCrumbs = false
