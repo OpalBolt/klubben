@@ -3,6 +3,9 @@ name: Deploy til GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # én gang dagligt — begivenheder redigeres kun i kalenderen
+    - cron: '17 4 * * *'
 
 permissions:
   contents: read
@@ -24,6 +27,15 @@ jobs:
         with:
           submodules: recursive
       - uses: jdx/mise-action@v2
+      - name: Hent kalenderen
+        env:
+          CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+        run: |
+          if [ -n "$CALENDAR_ID" ]; then
+            mise exec -- python scripts/fetch_events.py --calendar-id "$CALENDAR_ID" --out data/calendar.json
+          else
+            echo 'CALENDAR_ID ikke sat — bygger uden begivenheder'
+          fi
       - name: Byg sitet
         run: mise exec -- hugo --minify --gc
       - uses: actions/configure-pages@v5

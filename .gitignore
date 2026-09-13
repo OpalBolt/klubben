@@ -6,5 +6,8 @@ public/
 resources/_gen/
 .hugo_build.lock
 
+# kalender-data er byggeoutput, genereret per deploy
+data/calendar.json
+
 # mise local overrides
 .mise.local.toml

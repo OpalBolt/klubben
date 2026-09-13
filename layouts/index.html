@@ -8,8 +8,24 @@
 
     <section class="denne-uge" aria-label="Denne uge">
       <h2>Denne uge</h2>
-      <!-- slice 06: ugens begivenheder fra kalenderen indsættes her -->
+      {{ $today := time.Format "2006-01-02" now }}
+      {{ $in7days := time.Format "2006-01-02" (now.AddDate 0 0 7) }}
+      {{ $weekEvents := slice }}
+      {{ range hugo.Data.calendar }}
+        {{ $d := substr .start_iso 0 10 }}
+        {{ if and (ge $d $today) (le $d $in7days) }}
+          {{ $weekEvents = $weekEvents | append . }}
+        {{ end }}
+      {{ end }}
+      {{ if $weekEvents }}
+      <ul>
+        {{ range $weekEvents }}
+        <li><strong>{{ .title }}</strong> — {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+        {{ end }}
+      </ul>
+      {{ else }}
       <p>Ingen begivenheder at vise lige nu — vi mødes som altid onsdag kl. 19.00.</p>
+      {{ end }}
       <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
     </section>
   </div>

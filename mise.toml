@@ -1,3 +1,5 @@
 [tools]
 # pinned so local dev and the Pages CI build use the same Hugo
 hugo = "0.166.0"
+# kalender-hentningen i deploy-workflowet kører på samme pin
+python = "3.14"
