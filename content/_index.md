@@ -12,5 +12,5 @@ Vi mødes **hver onsdag kl. 19.00** — lille poolturnering, kolde drikke og god
 
 Trappen ned til os er næsten skjult — [sådan finder du os]({{< relref "find-os.md" >}}).
 
-Priserne står på [siden Det koster]({{< relref "det-koster.md" >}}) — de betales
-i lokalet, først når du kommer.
+Se også [faciliteterne]({{< relref "/faciliteter/_index.md" >}}) — billardsal,
+motionsrum og lokaler til leje.

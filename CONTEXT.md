@@ -27,23 +27,32 @@ _Avoid_: event list, schedule, CMS
 
 **Event (begivenhed)**:
 Anything scheduled in the Calendar — including new activities (board games,
-exercise room, PC café). New activities exist on the website only as events,
-never as standing promises on other pages.
+exercise room, PC café). The calendar stays the only source of truth for
+*when* something happens; recurring activities get one descriptive line on
+their facility page and nothing more.
 
 ## Site
 
-**The five pages**:
-Forside, Det koster, Events, Find os, Historie — the complete page list.
-Nothing is added until a real need appears.
+**The pages**:
+Forside, Det koster, Faciliteter (with three sub-pages), Events, Find os,
+Historie — the complete page list. Nothing is added until a real need
+appears.
 
 **Forside**:
-Carries the newcomer message: "just walk in", the fixed Wednesday programme,
-and this week's calendar events in two side-by-side boxes. Links out to
-prices and directions; it is the site's front door and only conversion path.
+Carries the newcomer message: guests welcome any Wednesday, membership
+required to join, and this week's calendar events in one card. Links out to
+prices, facilities and directions; it is the site's front door and only
+conversion path.
 
 **Det koster**:
 The prices (40 kr/md, 10 kr/drikke) on their own page, in the menu right
 after Forside, so they do not crowd the front door.
+
+**Faciliteter**:
+The club's rooms — billardsal, motionsrum, leje af lokaler — one sub-page
+each. Describes the rooms and how to use or rent them; when things happen
+points to the calendar. The fixed Wednesday programme lives here, not on
+the front page.
 
 **Events**:
 Mirrors the Calendar. Rebuilt once daily; staleness up to 24h is accepted.
