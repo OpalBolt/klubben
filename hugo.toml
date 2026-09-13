@@ -29,17 +29,21 @@ name = "Faciliteter"
 pageRef = "/faciliteter/"
 weight = 3
 [[menu.main]]
+name = "Regler"
+pageRef = "/regler/"
+weight = 4
+[[menu.main]]
 name = "Events"
 pageRef = "/events/"
-weight = 4
+weight = 5
 [[menu.main]]
 name = "Find os"
 pageRef = "/find-os/"
-weight = 5
+weight = 6
 [[menu.main]]
 name = "Historie"
 pageRef = "/historie/"
-weight = 6
+weight = 7
 
 [params]
 # lys papir altid — slår mørk tilstand og dens JS helt fra; med defaultTheme = "light" udsendes heller intet auto-theme-script
