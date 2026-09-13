@@ -1,33 +1,44 @@
 {{ define "main" }}
 <!-- spill: custom home template (slice 01) so Forside renders as a plain
      front door instead of PaperMod's empty post list; slice 03 added the
-     prices block and the "Denne uge" section -->
+     prices block and the "Denne uge" section. md-content-class gendanner
+     listeindrykningen, som PaperMods reset ellers nulstiller. -->
 <article class="forside">
-  <div class="post-content">
+  <div class="post-content md-content">
     {{ .Content }}
 
-    <section class="denne-uge" aria-label="Denne uge">
-      <h2>Denne uge</h2>
-      {{ $today := time.Format "2006-01-02" now }}
-      {{ $in7days := time.Format "2006-01-02" (now.AddDate 0 0 7) }}
-      {{ $weekEvents := slice }}
-      {{ range hugo.Data.calendar }}
-        {{ $d := substr .start_iso 0 10 }}
-        {{ if and (ge $d $today) (le $d $in7days) }}
-          {{ $weekEvents = $weekEvents | append . }}
+    <div class="begivenheds-kort">
+      <section class="uge-kort" aria-label="Faste events">
+        <h2>Faste events</h2>
+        <ul>
+          <li><strong>Hver onsdag kl. 19.00</strong> — poolturnering, kolde
+            drikke og god snak. Altid.</li>
+        </ul>
+      </section>
+
+      <section class="uge-kort" aria-label="Denne uge">
+        <h2>Denne uge</h2>
+        {{ $today := time.Format "2006-01-02" now }}
+        {{ $in7days := time.Format "2006-01-02" (now.AddDate 0 0 7) }}
+        {{ $weekEvents := slice }}
+        {{ range hugo.Data.calendar }}
+          {{ $d := substr .start_iso 0 10 }}
+          {{ if and (ge $d $today) (le $d $in7days) }}
+            {{ $weekEvents = $weekEvents | append . }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-      {{ if $weekEvents }}
-      <ul>
-        {{ range $weekEvents }}
-        <li><strong>{{ .title }}</strong> — {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+        {{ if $weekEvents }}
+        <ul>
+          {{ range $weekEvents }}
+          <li><strong>{{ .title }}</strong> — {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+          {{ end }}
+        </ul>
+        {{ else }}
+        <p>Ingen begivenheder at vise lige nu — vi mødes som altid onsdag kl. 19.00.</p>
         {{ end }}
-      </ul>
-      {{ else }}
-      <p>Ingen begivenheder at vise lige nu — vi mødes som altid onsdag kl. 19.00.</p>
-      {{ end }}
-      <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
-    </section>
+        <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
+      </section>
+    </div>
   </div>
 </article>
 {{ end }}

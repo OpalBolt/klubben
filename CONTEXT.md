@@ -31,13 +31,18 @@ never as standing promises on other pages.
 
 ## Site
 
-**The four pages**:
-Forside, Events, Find os, Historie — the complete page list. Nothing is added
-until a real need appears.
+**The five pages**:
+Forside, Det koster, Events, Find os, Historie — the complete page list.
+Nothing is added until a real need appears.
 
 **Forside**:
-Carries the newcomer message: prices (40 kr/md, 10 kr/drikke) and "just walk
-in". The site's front door and only conversion path.
+Carries the newcomer message: "just walk in", the fixed Wednesday programme,
+and this week's calendar events in two side-by-side boxes. Links out to
+prices and directions; it is the site's front door and only conversion path.
+
+**Det koster**:
+The prices (40 kr/md, 10 kr/drikke) on their own page, in the menu right
+after Forside, so they do not crowd the front door.
 
 **Events**:
 Mirrors the Calendar. Rebuilt once daily; staleness up to 24h is accepted.
