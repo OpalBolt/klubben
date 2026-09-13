@@ -10,9 +10,5 @@ kolde drikke og god snak.
 
 Trappen ned til os er næsten skjult — [sådan finder du os]({{< relref "find-os.md" >}}).
 
-## Det koster
-
-- **40 kr. om måneden** i medlemskab
-- **10 kr. pr. drik** — øl, vin og sodavand
-
-Medlemskabet betales i lokalet — først når du kommer.
+Priserne står nu på [siden Det koster]({{< relref "det-koster.md" >}}) — de betales
+i lokalet, først når du kommer.
