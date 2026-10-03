@@ -1,5 +1,5 @@
 ---
-title: "klubben"
+title: "Klubben Gurreparken"
 ---
 Bor du her? Så er dette dit klubhus.
 

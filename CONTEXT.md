@@ -5,9 +5,11 @@ newcomers; its job is to make them show up on a Wednesday.
 
 ## Language
 
-**klubben**:
-The club's name. Always lowercase, no logo, no tagline.
-_Avoid_: Klubben, the Club
+**Klubben Gurreparken**:
+The club's name. Site title and headers use the full name (header shows it
+stacked like the flyer: "Klubben" over "Gurreparken"). In running prose,
+"klubben" alone is fine after first mention.
+_Avoid_: renaming in prose, logo changes, taglines
 
 **Newcomer (ny/gæst)**:
 A person who has not joined. The website's whole answer to them is "come by
