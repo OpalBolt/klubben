@@ -64,7 +64,7 @@ h1, h2, h3, h4 {
 .header .menu a {
     font-weight: 600;
     color: var(--primary);
-    font-size: 18px; /* samme læselige størrelse som resten af sitet (60+) */
+    font-size: 20px; /* samme læselige størrelse som resten af sitet (60+) */
 }
 
 /* PaperMods nav er en vandret rulleseddel (overflow-x: auto, nowrap) —
@@ -83,4 +83,72 @@ h1, h2, h3, h4 {
 .logo a,
 .logo #logo {
     font-weight: 700;
+}
+
+/* ── flyer-tema på de generelle sider ──────────────────────────────── */
+
+/* sideoverskrift: flyerens dobbeltstreg i accent, men i fuld bredde
+   under titlen — venstrestillet og altid flush med indholdet, i samme
+   sprog som h2'ernes enkelte streger. */
+.post-header .post-title,
+.page-header h1 {
+    border-bottom: 3px double var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+/* forsidens flyer-hoved: øje + navn + streg + underlinje, som på arket */
+.forside-hoved {
+    text-align: center;
+    margin: 0 auto 1.5rem;
+}
+.forside-hoved .øje {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+.forside-hoved h1 {
+    margin: 0.3rem 0 0;
+    font-size: 2.9rem;
+    line-height: 1.05;
+}
+.forside-hoved h1::after {
+    content: "";
+    display: block;
+    margin: 1rem auto 0;
+    width: 7rem;
+    border-top: 3px double var(--accent);
+}
+.forside-hoved .under {
+    margin: 0.9rem 0 0;
+    font-style: italic;
+    color: var(--secondary);
+    font-size: 1.15rem;
+}
+
+/* footeren: almindelig tekst, ingen QR-boks — man er allerede på sitet */
+.footer {
+    font-size: 16px; /* 12px er for lidt til målgruppen */
+}
+
+/* begivenhedslisten: én linje pr. begivenhed adskilt med papirstreger */
+.begivenheder {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+.begivenheder li {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+}
+.begivenheder li:first-child {
+    border-top: 1px solid var(--border);
+}
+
+/* nav: større trykflader til skøre fingre */
+.header .menu a {
+    padding: 0.3rem 0.55rem;
 }
