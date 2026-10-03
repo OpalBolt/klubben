@@ -16,8 +16,8 @@ requires a membership, paid in the room; there is no digital signup path.
 _Avoid_: guest user, visitor, prospective member
 
 **Member (medlem)**:
-A person who pays 40 DKK/month in person. Joins by showing up; there is no
-digital signup path.
+A person who pays in person each month: 40 DKK for pensioners, 100 DKK for
+everyone else. Joins by showing up; there is no digital signup path.
 
 **Calendar (kalenderen)**:
 The single public Google Calendar. The only source of truth for what happens
@@ -45,7 +45,7 @@ prices, facilities and directions; it is the site's front door and only
 conversion path.
 
 **Det koster**:
-The prices (40 kr/md, 10 kr/drikke) on their own page, in the menu right
+The prices (medlemskab 40/100 kr/md, drikke 10/20 kr) on their own page, in the menu right
 after Forside, so they do not crowd the front door.
 
 **Faciliteter**:
