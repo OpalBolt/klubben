@@ -1,0 +1,101 @@
+{{/* flyer — A4 med 4 ens kort (A6) i 2×2 grid, stiplede kliplinjer imellem.
+       To varianter: sættes `dato` i frontmatter renderes event-udgaven
+       (åbent hus osv.), ellers den generelle. Kopien lever i
+       indholdsfilen, så en ny event er en ny lille .md-fil. */}}
+{{ define "hint" }}Udskrift: Ctrl+P / ⌘P. Vælg A4. Klip de fire flyere ad langs de stiplede linjer.{{ end }}
+{{ define "main" }}
+<div class="flyerark">
+  {{ range 4 }}
+  <section class="kort">
+    <header class="kort-hoved">
+      <p class="øje">Klubben</p>
+      <h1>Gurreparken</h1>
+    </header>
+
+    <div class="kort-indhold">
+      {{ with $.Params.dato }}
+      <p class="øje-event">{{ $.Params.event_overskrift }}</p>
+      <h2>{{ $.Params.event_titel }}</h2>
+      <p class="ramme">{{ $.Params.dato }} · {{ $.Params.tid }}</p>
+      <p class="brød">{{ $.Params.event_tekst }}</p>
+      {{ else }}
+      <p class="lead">{{ $.Params.lead }}</p>
+      <p class="brød">{{ $.Params.tekst }}</p>
+      <p class="ramme">{{ $.Params.stamtid }}</p>
+      <p class="faciliteter">{{ $.Params.faciliteter }}</p>
+      {{ end }}
+    </div>
+
+    <footer class="kort-fod">
+      <p class="besked">{{ $.Params.besked }}</p>
+      <div class="kort-fodbund">
+        <img class="qr" src="{{ "qr.svg" | relURL }}" alt="QR-kode til klubbengurreparken.dk" width="210" height="210">
+        <div>
+          <p class="url">klubbengurreparken.dk</p>
+          <p class="sted">Kælderindgangen ved Sabrosvej 5B:<br>kig efter trappen ned i facaden</p>
+        </div>
+      </div>
+    </footer>
+  </section>
+  {{ end }}
+</div>
+<style>
+  .flyerark {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 282mm; /* 3 mm under sideindholdet: browser-rundning ellers giver side 2 */
+  }
+  /* kliplinjer: kun de indre kanter */
+  .kort { border-right: 1px dashed var(--border); border-bottom: 1px dashed var(--border); }
+  .kort:nth-child(2n) { border-right: none; }
+  .kort:nth-child(n+3) { border-bottom: none; }
+
+  .kort {
+    display: flex; flex-direction: column;
+    padding: 6mm 7mm;
+  }
+  .kort-hoved { text-align: center; }
+  .øje {
+    margin: 0; font-size: 11pt; letter-spacing: .35em;
+    color: var(--secondary); text-transform: uppercase;
+  }
+  .kort-hoved h1 {
+    margin: .5mm 0 2.5mm; font-size: 28pt; line-height: 1.05;
+  }
+  .kort-hoved h1::after { /* tynd dobbeltstreg som på sitets h2 */
+    content: ""; display: block; margin: 2.5mm auto 0;
+    width: 38mm; border-top: 3px double var(--accent);
+  }
+
+  .kort-indhold { flex: 1; padding-top: 3.5mm; }
+  .lead { font-size: 13.5pt; font-weight: 700; margin: 0 0 2mm; text-align: center; }
+  .brød { font-size: 10.5pt; line-height: 1.45; margin: 0 0 2.5mm; }
+  .ramme {
+    font-size: 13pt; font-weight: 700; text-align: center;
+    border: 1px solid var(--border); padding: 1.5mm 0; margin: 2.5mm 6mm;
+  }
+  .faciliteter {
+    font-size: 9pt; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--secondary); text-align: center; margin: 0;
+  }
+
+  .øje-event {
+    font-size: 11pt; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--accent); font-weight: 700; margin: 0 0 1.5mm; text-align: center;
+  }
+  .kort-indhold h2 {
+    font-size: 24pt; line-height: 1.1; margin: 0 0 1.5mm; text-align: center;
+  }
+
+  .kort-fod { margin-top: auto; }
+  .besked {
+    font-size: 10pt; line-height: 1.45; font-weight: 700; text-align: center;
+    color: var(--accent); margin: 0 0 2.5mm;
+  }
+  .kort-fodbund { display: flex; align-items: center; gap: 4mm; }
+  .qr { width: 20mm; height: 20mm; flex: none; }
+  .url { font-size: 12pt; font-weight: 700; margin: 0; }
+  .sted { font-size: 9.5pt; color: var(--secondary); margin: 1mm 0 0; line-height: 1.4; }
+</style>
+{{ end }}

@@ -1,0 +1,59 @@
+{{/* seddel — 1 A4 til væggen i klubben. Kopien står som markdown i
+       indholdsfilen (## pr. blok), layoutet rammer ind med navn øverst
+       og QR + praktisk fod nederst. */}}
+{{ define "main" }}
+<article class="seddel">
+  <header class="seddel-hoved">
+    <p class="øje">Klubben</p>
+    <h1>Gurreparken</h1>
+    <p class="under">frivillig kælderklub, her siden 1960'erne</p>
+  </header>
+
+  <div class="seddel-indhold">
+    {{ .Content }}
+  </div>
+
+  <footer class="seddel-fod">
+    <img class="qr" src="{{ "qr.svg" | relURL }}" alt="QR-kode til klubbengurreparken.dk" width="210" height="210">
+    <div>
+      <p class="url">klubbengurreparken.dk</p>
+      <p class="sted">Alle kan kigge forbi som gæst · vi mødes hver onsdag kl. 19.00</p>
+    </div>
+  </footer>
+</article>
+<style>
+  .seddel {
+    display: flex; flex-direction: column;
+    min-height: 282mm; /* 3 mm under sideindholdet: holder sig på én side */
+  }
+  .seddel-hoved { text-align: center; margin-bottom: 6mm; }
+  .øje {
+    margin: 0; font-size: 13pt; letter-spacing: .35em;
+    color: var(--secondary); text-transform: uppercase;
+  }
+  .seddel-hoved h1 { margin: 1mm 0 2mm; font-size: 34pt; line-height: 1.05; }
+  .seddel-hoved h1::after {
+    content: ""; display: block; margin: 3mm auto 0;
+    width: 60mm; border-top: 3px double var(--accent);
+  }
+  .under { margin: 2.5mm 0 0; color: var(--secondary); font-size: 12.5pt; font-style: italic; }
+
+  .seddel-indhold { flex: 1; }
+  .seddel-indhold h2 {
+    font-size: 16pt; margin: 5mm 0 1.5mm;
+    border-bottom: 2px solid var(--border); padding-bottom: 1mm;
+  }
+  .seddel-indhold p { font-size: 12.5pt; line-height: 1.55; margin: 0 0 2mm; }
+  .seddel-indhold ul { margin: 0 0 2mm; padding-left: 6mm; }
+  .seddel-indhold li { font-size: 12.5pt; line-height: 1.5; margin: 0 0 1mm; }
+
+  .seddel-fod {
+    display: flex; align-items: center; gap: 6mm;
+    border: 1px solid var(--border); padding: 4mm 5mm; margin-top: 6mm;
+    background: #fbf6ea; /* papirkort-farven fra sitet: svag nok til laser */
+  }
+  .qr { width: 24mm; height: 24mm; flex: none; }
+  .url { font-size: 15pt; font-weight: 700; margin: 0; }
+  .sted { font-size: 11.5pt; color: var(--secondary); margin: 1mm 0 0; }
+</style>
+{{ end }}

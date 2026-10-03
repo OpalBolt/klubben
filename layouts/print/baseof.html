@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{{/* print-baseof: fælles skelet til /print-siderne. Papir-stil på hvidt
+       ark, ingen PaperMod-chrome, noindex og ude af sitemap/menu (via
+       build.list: never i indholdet). Paletten er vintage.css' tokens. */}}
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{{ .Title }} · klubben</title>
+  <style>
+    :root {
+      --ink: #2b2117;       /* varm nær-sort blæk */
+      --secondary: #54432e; /* falmet blæk */
+      --border: #c3b391;    /* papirgrænse */
+      --accent: #8a3d0f;    /* brændt sienna */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: var(--ink);
+      background: #7a6a4f; /* skærm-baggrund; væk ved print */
+    }
+    /* skærm-hint over arket */
+    .hint {
+      max-width: 210mm; margin: 1rem auto; padding: .5rem 1rem;
+      background: var(--ink); color: #efe6cd; font-size: 14px;
+      text-align: center;
+    }
+    /* arket: A4 på skærmen, selve papiret ved print */
+    .ark {
+      width: 210mm; min-height: 297mm; background: #fff;
+      margin: 0 auto 2rem; padding: 6mm;
+      box-shadow: 0 4px 18px rgba(0,0,0,.45);
+    }
+    @media print {
+      @page { size: A4 portrait; margin: 6mm; }
+      body { background: #fff; }
+      .hint { display: none; }
+      .ark { margin: 0; padding: 0; width: auto; min-height: auto; box-shadow: none; }
+      * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hint">{{ block "hint" . }}Udskrift: Ctrl+P / ⌘P. Vælg A4 og standardindstillinger.{{ end }}</div>
+  <main class="ark">{{ block "main" . }}{{ end }}</main>
+</body>
+</html>
