@@ -8,7 +8,7 @@ du finder frem:
 
 ## Sådan finder du frem
 
-klubben ligger i kælderenedgangen ved Sabrosvej 5B.
+Klubben ligger i kælderindgangen ved Sabrosvej 5B.
 
 ## Trappen ned
 
