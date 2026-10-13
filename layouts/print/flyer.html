@@ -32,7 +32,7 @@
         <img class="qr" src="{{ "qr.svg" | relURL }}" alt="QR-kode til klubbengurreparken.dk" width="210" height="210">
         <div>
           <p class="url">klubbengurreparken.dk</p>
-          <p class="sted">Kælderindgangen ved Sabrosvej 5B:<br>kig efter trappen ned i facaden</p>
+          <p class="sted">Kælderindgangen ved Sabrosvej 5B:<br>kig efter trappen</p>
         </div>
       </div>
     </footer>
@@ -93,7 +93,11 @@
     font-size: 10pt; line-height: 1.45; font-weight: 700; text-align: center;
     color: var(--accent); margin: 0 0 2.5mm;
   }
-  .kort-fodbund { display: flex; align-items: center; gap: 4mm; }
+  .kort-fodbund {
+    display: flex; align-items: center; gap: 4mm;
+    border: 1px solid var(--border); padding: 3mm 4mm;
+    background: #fbf6ea; /* papirkort-farven fra sitet: svag nok til laser */
+  }
   .qr { width: 20mm; height: 20mm; flex: none; }
   .url { font-size: 12pt; font-weight: 700; margin: 0; }
   .sted { font-size: 9.5pt; color: var(--secondary); margin: 1mm 0 0; line-height: 1.4; }
