@@ -3,17 +3,13 @@ title: "Det koster"
 ---
 Det koster ikke meget at være med.
 
-- **40 kr. om måneden** i medlemskab, hvis du er pensionist
-- **100 kr. om måneden** i medlemskab for alle andre
+- **40 kr. om måneden** i medlemskab
 
 ## I baren
 
 Drikkevarerne henter du selv. Du skriver i bogen ved dit navn, hvad du
 tager, og gør regnskabet op, når det passer dig. Det koster det samme,
-uanset hvad du tager:
-
-- **10 kr.** for medlemmer
-- **20 kr.** for gæster
+uanset hvad du tager: 10 kr.
 
 - Øl
 - Vin: rød, hvid og rosé
