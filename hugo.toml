@@ -1,6 +1,6 @@
 # Klubben Gurreparken — Hugo-siteconfig
-# repos > github-pages: https://klubbengureparken.dk
-baseURL = "https://klubbengureparken.dk/"
+# repos > github-pages: https://klubbengurreparken.dk
+baseURL = "https://klubbengurreparken.dk/"
 title = "Klubben Gurreparken"
 locale = "da-dk"
 defaultContentLanguage = "da"
@@ -12,8 +12,8 @@ disableKinds = ["taxonomy", "term", "rss"]
 
 # kodeblokke i papirfarve — ellers kommer chromas mørke standardblok oven i det lyse tema
 [markup]
-  [markup.highlight]
-    style = "solarized-light"
+[markup.highlight]
+style = "solarized-light"
 
 [menu]
 [[menu.main]]
