@@ -1,6 +1,6 @@
 # Klubben Gurreparken — Hugo-siteconfig
-# repos > github-pages: https://opalbolt.github.io/klubben/
-baseURL = "https://opalbolt.github.io/klubben/"
+# repos > github-pages: https://klubbengureparken.dk
+baseURL = "https://klubbengureparken.dk/"
 title = "Klubben Gurreparken"
 locale = "da-dk"
 defaultContentLanguage = "da"
