@@ -14,27 +14,33 @@
   <div class="post-content md-content">
     {{ .Content }}
 
+
     <section class="uge-kort" aria-label="Denne uge">
-      <h2>Denne uge</h2>
-      {{ $today := time.Format "2006-01-02" now }}
-      {{ $in7days := time.Format "2006-01-02" (now.AddDate 0 0 7) }}
-      {{ $weekEvents := slice }}
-      {{ range hugo.Data.calendar }}
-        {{ $d := substr .start_iso 0 10 }}
-        {{ if and (ge $d $today) (le $d $in7days) }}
-          {{ $weekEvents = $weekEvents | append . }}
+        <h2>Denne uge</h2>
+        {{ $now := now }}
+        {{/* Go: Sunday = 0, so shift so Monday = 0 */}}
+        {{ $offset := mod (add $now.Weekday 6) 7 }}
+        {{ $monday := $now.AddDate 0 0 (mul -1 $offset) }}
+        {{ $sunday := $monday.AddDate 0 0 6 }}
+        {{ $start := time.Format "2006-01-02" $monday }}
+        {{ $end := time.Format "2006-01-02" $sunday }}
+        {{ $weekEvents := slice }}
+        {{ range hugo.Data.calendar }}
+            {{ $d := substr .start_iso 0 10 }}
+            {{ if and (ge $d $start) (le $d $end) }}
+            {{ $weekEvents = $weekEvents | append . }}
+            {{ end }}
         {{ end }}
-      {{ end }}
-      {{ if $weekEvents }}
-      <ul>
-        {{ range $weekEvents }}
-        <li><strong>{{ .title }}</strong>: {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+        {{ if $weekEvents }}
+        <ul>
+            {{ range $weekEvents }}
+            <li><strong>{{ .title }}</strong>: {{ .date_dk }}{{ with .time_dk }}, {{ . }}{{ end }}</li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p>Ingen begivenheder at vise denne uge. Vi mødes som altid onsdag kl. 19.00.</p>
         {{ end }}
-      </ul>
-      {{ else }}
-      <p>Ingen begivenheder at vise lige nu. Vi mødes som altid onsdag kl. 19.00.</p>
-      {{ end }}
-      <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
+        <p><a href="{{ "events/" | relURL }}">Se alle begivenheder</a></p>
     </section>
   </div>
 </article>
